@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 행병합 힌트 : <td rowspan='2'>내용</td> -->
+    <table border="1">
+        <thead>
+        <tr>
+            <th colspan="2"><b>날짜</b></th>
+            <th><b>날씨</b></th>
+            <th><b>풍향</b></th>
+            <th><b>풍속(m/s)</b></th>
+        </tr>
+    </thead>
+        <tr>
+            <td>24일(월)</td>
+            <td>오후</td>
+            <td><img src="./image/우산.jpg" alt=""></td>
+            <td>남~남서</td>
+            <td>3~7</td>
+        </tr>
+        <tr>
+            <td rowspan="2">25일(화)</td>
+            <td>오전</td>
+            <td><img src="./image/우산.jpg" alt=""></td>
+            <td>서~북서</td>
+            <td>3~6</td>
+        </tr>
+        <tr>
+            <td>오후</td>
+            <td><img src="./image/날씨.jpg" alt=""></td>
+            <td>북서~서</td>
+            <td>3~6</td>
+        </tr>
+    </table>
+</body>
+</html>
