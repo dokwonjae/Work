@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>태그를 찾아서 배경색 입히기</title>
+  </head>
+
+  <body>
+    <p class="target">
+      <span class="lo">lorem</span>
+      <span class="ip">Ipsum</span>
+      <span class="do">Dolor</span>
+    </p>
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      // ip 를 찾아서 배경색 : skyblue
+      $(function () {
+        $(".target").find(".ip").css("background-color", "skyblue");
+      });
+    </script>
+  </body>
+</html>

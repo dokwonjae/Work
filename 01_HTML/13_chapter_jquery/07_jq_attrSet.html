@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>속성의 값을 저장하여 출력하기</title>
+  </head>
+
+  <body>
+    <!-- 빈 이미지 -->
+    <img />
+    <img />
+    <img />
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      // 속성에 값 저장
+      $(function () {
+        $("img").attr("alt", "jQuery 속성 저장");
+        $("img").attr("src", "http://placehold.it/100x100");
+        $("img").attr("width", "100");
+      });
+    </script>
+  </body>
+</html>

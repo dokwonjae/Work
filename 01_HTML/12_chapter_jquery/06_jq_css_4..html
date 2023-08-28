@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>선택자 2개 속성 동시적용 체이닝</title>
+  </head>
+
+  <body>
+    <h1>제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3 id="tit3">직접선택자</h3>
+    <h3>인접선택자</h3>
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      $(function () {
+        // 코딩 : 예제 : 2개를 선택해서 디자인 적용하기
+        // $(선택자, 선택자2).함수()
+        $("h1, #tit3")
+          .css("background-color", "#0ff")
+          .css("border", "2px dashed #f00");
+      });
+    </script>
+  </body>
+</html>

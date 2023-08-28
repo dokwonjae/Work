@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>클릭 이벤트로 사라지게 show/hide 기능 한 번에 toggle 효과</title>
+  </head>
+
+  <body>
+    <button class="btn">Click to toggle</button>
+    <p class="target">Lorem ipsum dolor sit amet</p>
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      $(function () {
+        $(".btn").click(function () {
+          // 클릭
+          // toggle === show/hide 기능
+          $(".target").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

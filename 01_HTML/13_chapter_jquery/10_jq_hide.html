@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>클릭 이벤트로 느리게, 빠르게 효과 hide</title>
+  </head>
+
+  <body>
+    <button>Toggle Show</button>
+    <div class="page">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      /* jquery 기본형 형태 = 축약형 형태 */
+
+      // jquery 기본형 형태
+      // $(document).ready(function(){
+      // });
+
+      // jquery 축약형 형태
+      $(function () {
+        // 클릭
+        $("button").click(function () {
+          // 간단한 효과를 적용합니다.
+          $(".page").fadeToggle("slow"); // 느리게 실행
+          // $(".page").fadeToggle("fast");  // 빠르게 실행
+        });
+      });
+    </script>
+  </body>
+</html>

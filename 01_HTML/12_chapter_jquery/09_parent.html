@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>인접 관계(부모 태그) 체이닝</title>
+  </head>
+
+  <body>
+    <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+      <li>
+        리스트1
+        <!-- 자식 목록 -->
+        <ul>
+          <li id="list_1">리스트1-1</li>
+          <li>리스트1-2</li>
+        </ul>
+      </li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+    </ul>
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      // 인접 관계 선택자 :
+      $(function () {
+        // 코딩 : #list_1 에서 부모 태그 선택하기
+        // 사용법 : $(css선택자).parent().함수()
+        $("#list_1").parent().css("border", "2px dashed #f00");
+      });
+    </script>
+  </body>
+</html>

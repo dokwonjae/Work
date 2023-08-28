@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>탐색(eq) 선택 디자인 적용</title>
+  </head>
+
+  <body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+      <li>내용4</li>
+      <li>내용5</li>
+    </ul>
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      $(function () {
+        // 사용법 : $(css선택자).eq(인덱스번호).함수();
+        // 인덱스번호(배열) : 0 ~ n 까지
+        // 인덱스번호에 해당하는 태그를 선택함
+        $("#menu li").eq(2).css("background-color", "#ff0");
+      });
+    </script>
+  </body>
+</html>

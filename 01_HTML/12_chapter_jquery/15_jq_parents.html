@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>선택태그 위의 부모들 모두 선택 디자인 적용</title>
+  </head>
+
+  <body>
+    <h1 class="title">선택자</h1>
+    <section>
+        <div>
+            <!-- 선택 -->
+            <p class="txt1">내용</p>
+            <p class="txt2">내용</p>
+        </div>
+
+    <!-- jquery cdn 필수 -->
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      $(function () {
+        // .txt1 의 선택태그 위의 부모를 모두 포함 선택
+        // 사용법 : $("css선택자").parents().함수()
+        $(".txt1").parents().css("border", "2px dashed #f00");
+      });
+    </script>
+  </body>
+</html>

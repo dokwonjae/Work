@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Location.(href&replace)</title>
+  </head>
+
+  <body>
+    <button onclick="moveNaver()">네이버 이동</button>
+    <button onclick="moveGoogle()">구글 이동</button>
+    
+  <!-- 간단한 코드라 js파일없이 아래에서 script 작성 -->
+    <script>
+      // 함수 정의
+      function moveNaver() {
+        // location.href
+        // 웹 브라우저 기본 기능(방문한 페이지는 자동 저장됨)
+        // 페이지 이동 : 이력(histoy)을 남기면서 이동(뒤로가기 가능)
+        // 네이버 페이지로 이동 후 뒤로가기가 가능
+        // 사용법 : location.href = "이동할페이지 외부 프로토콜(http) 경로"
+        location.href = "http://www.naver.com";
+      }
+
+      // location.replace
+      // 페이지 이동 : 이력(histoy)을 남기지 않음(뒤로가기 불가능)
+      // 구글 페이지로 이동 후 뒤로가기 불가
+      // 사용법 : location.replace = "이동할페이지 외부 프로토콜(http) 경로"
+      function moveGoogle() {
+        location.replace("http://www.google.com");
+      }
+    </script>
+  </body>
+</html> 
