@@ -34,7 +34,16 @@ function EmpList() {
     retrieveCustomer(); // 함수의 사용
   }, []);
 
-  const findByCname = () => {};
+  const findByCname = () => {
+    EmpService.findByCname(searchCname)
+    .then((response)=> {
+      setCustomer(response.data)
+      console.log(response.data)
+    })
+    .catch((e) => {
+      console.log(e)
+    })
+  };
 
   const onChangeSearchCname = (event) => {
     setSearchCname(event.target.value); // 역바인딩 코딩
@@ -96,7 +105,7 @@ function EmpList() {
                   <td>{data.email}</td>
                   <td>{data.phone}</td>
                   <td>
-                    <Link to={"/customer/" + data.id}>
+                    <Link to={"/emp/" + data.id}>
                       <span className="badge bg-success">Edit</span>
                     </Link>
                   </td>

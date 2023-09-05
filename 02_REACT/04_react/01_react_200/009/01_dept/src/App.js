@@ -8,6 +8,8 @@ import AddEmp from "./pages/emp/AddEmp"; // 자식 컴포넌트
 import EmpList from "./pages/emp/EmpList"; // 자식 컴포넌트
 
 import NotFound from "./components/NotFound"; // 공통 컴포넌트
+import Dept from "./pages/dept/Dept";
+import Emp from "./pages/emp/Emp";
 
 function App() {
   return (
@@ -22,12 +24,15 @@ function App() {
           {/* * : 지정되지 않은 모든 url */}
           <Route path="*" element={<NotFound />} />
 
+          {/* 부서 메뉴 */}
           <Route path="/dept" element={<DeptList />} />
           <Route path="/add-dept" element={<AddDept />} />
+          <Route path="/dept/:id" element={<Dept />} />
 
           {/* 연습 사원 메뉴 */}
           <Route path="/emp" element={<EmpList />} />
           <Route path="/add-emp" element={<AddEmp />} />
+          <Route path="/emp/:id" element={<Emp />} />
         </Routes>
       </div>
     </div>
